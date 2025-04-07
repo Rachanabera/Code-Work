@@ -17,48 +17,51 @@
       background: url('image.png') no-repeat center center fixed;
       background-size: cover;
       color: white;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px;
     }
 
     .container {
       text-align: center;
-      padding: 40px;
+      padding: 30px;
       background: rgba(0, 0, 0, 0.6);
       border-radius: 20px;
       box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
       max-width: 600px;
-      width: 90%;
+      width: 100%;
     }
 
     .logo {
-      width: 120px;
-      margin-bottom: 20px;
+      width: 100px;
+      margin-bottom: 15px;
     }
 
     .glitch-text {
-      font-size: 2.5rem;
+      font-size: 2rem;
       color: #00ffff;
       margin-bottom: 10px;
       text-shadow: 0 0 10px #0ff;
+      word-break: break-word;
     }
 
     .sub-glitch {
-      color: #fff;
-      font-size: 1.1rem;
-      margin-bottom: 25px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #eee;
     }
 
     input[type="text"] {
       padding: 10px;
-      width: 80%;
+      width: 100%;
       max-width: 300px;
       border: none;
       border-radius: 10px;
       font-size: 1rem;
       margin-bottom: 15px;
+      outline: none;
     }
 
     button {
@@ -70,6 +73,7 @@
       border-radius: 10px;
       cursor: pointer;
       transition: 0.3s;
+      margin-bottom: 20px;
     }
 
     button:hover {
@@ -78,18 +82,47 @@
     }
 
     .passport {
-      margin-top: 30px;
       padding: 20px;
       border: 2px dashed #00ffff;
       border-radius: 15px;
       background: rgba(255, 255, 255, 0.1);
       display: none;
       animation: fadeIn 1s forwards;
+      font-size: 0.95rem;
     }
 
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; display: block; }
+    }
+
+    /* ✅ Responsive for Mobile */
+    @media (max-width: 480px) {
+      .glitch-text {
+        font-size: 1.5rem;
+      }
+
+      .sub-glitch {
+        font-size: 0.9rem;
+      }
+
+      .logo {
+        width: 80px;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        font-size: 0.9rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+      }
+
+      .passport {
+        font-size: 0.9rem;
+      }
     }
   </style>
 </head>
