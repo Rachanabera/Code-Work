@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TECHNOVATE | Dimensional Passport Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    body {
+      background: url('image.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .glitch-text {
+      font-size: 2.5rem;
+      color: #00ffff;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #0ff;
+    }
+
+    .sub-glitch {
+      color: #fff;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 80%;
+      max-width: 300px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: #00ffff;
+      color: black;
+      padding: 10px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #0ff;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    .passport {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #00ffff;
+      border-radius: 15px;
+      background: rgba(255, 255, 255, 0.1);
+      display: none;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; display: block; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="logo.jpeg" alt="TECHNOVATE Logo" class="logo" />
+    <h1 class="glitch-text">TECHNOVATE: Dimensional Gateway</h1>
+    <p class="sub-glitch">Scan your code. Create your Multiverse Identity.</p>
+    
+    <input type="text" id="nameInput" placeholder="Enter your name..." />
+    <br>
+    <button onclick="generatePassport()">Generate Passport</button>
+    
+    <div class="passport" id="passportCard"></div>
+  </div>
+  
+  <script>
+    function generatePassport() {
+      const name = document.getElementById("nameInput").value.trim();
+      const passportCard = document.getElementById("passportCard");
+
+      if (name === "") {
+        alert("Please enter your name to proceed.");
+        return;
+      }
+
+      const universeNumber = Math.floor(Math.random() * 9000) + 1000;
+      const variantID = "VAR-" + Math.random().toString(36).substr(2, 5).toUpperCase();
+      const powers = ["Time Manipulation", "Teleportation", "Invisibility", "Mind Reading", "Technomancy", "Dimensional Travel"];
+      const randomPower = powers[Math.floor(Math.random() * powers.length)];
+
+      passportCard.style.display = "block";
+      passportCard.innerHTML = `
+        <h2>🪪 Dimensional Passport</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Variant ID:</strong> ${variantID}</p>
+        <p><strong>Universe #:</strong> ${universeNumber}</p>
+        <p><strong>Special Power:</strong> ${randomPower}</p>
+        <p><strong>Status:</strong> Active Explorer</p>
+      `;
+    }
+  </script>
+</body>
+</html>
