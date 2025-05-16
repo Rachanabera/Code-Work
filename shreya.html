@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to PawPal | Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Fredoka One', cursive;
+      background: #fffaf0 url('https://cdn.pixabay.com/photo/2022/07/12/21/06/dog-7317820_1280.png') no-repeat right bottom;
+      background-size: 300px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: #fff5dc;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 350px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      color: #ff6f61;
+      margin-bottom: 20px;
+    }
+
+    .login-box img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+    }
+
+    .login-box input:focus {
+      outline: 2px solid #ff9a8b;
+    }
+
+    .login-box button {
+      background-color: #ff6f61;
+      color: white;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .login-box button:hover {
+      background-color: #ff3e3e;
+    }
+
+    .login-box p {
+      margin-top: 15px;
+      font-size: 0.9em;
+      color: #444;
+    }
+
+    .login-box p a {
+      color: #ff6f61;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-size: 150px;
+        background-position: bottom center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="paw">
+    <h2>Welcome Back, Pet Lover! 🐾</h2>
+    <form action="dashboard.html" method="post">
+      <input type="text" name="username" placeholder="Enter Username" required />
+      <input type="password" name="password" placeholder="Enter Password" required />
+      <button type="submit">Login</button>
+    </form>
+    <p>New here? <a href="#">Create your paw-profile!</a></p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resort Booking Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], input[type="date"], select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        footer {
+            text-align: center;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Resort & Adventure Booking</h1>
+    <p>Book your stay and adventure today!</p>
+</header>
+
+<div class="container">
+    <h2>Book Your Room</h2>
+    <form action="RoomBookingServlet" method="POST">
+        <label for="room_name">Room Type</label>
+        <select name="room_name" id="room_name" required>
+            <option value="Luxury Room">Luxury Room</option>
+            <option value="Standard Room">Standard Room</option>
+            <option value="Single Room">Single Room</option>
+        </select>
+
+        <label for="customer_name">Your Name</label>
+        <input type="text" id="customer_name" name="customer_name" required placeholder="Enter your full name">
+
+        <label for="customer_email">Email</label>
+        <input type="email" id="customer_email" name="customer_email" required placeholder="Enter your email">
+
+        <label for="check_in_date">Check-in Date</label>
+        <input type="date" id="check_in_date" name="check_in_date" required>
+
+        <label for="check_out_date">Check-out Date</label>
+        <input type="date" id="check_out_date" name="check_out_date" required>
+
+        <input type="submit" value="Book Now">
+    </form>
+</div>
+
+<footer>
+    <p>&copy; 2025 Resort & Adventure Management</p>
+</footer>
+
+</body>
+</html>
